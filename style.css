@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+h1,
+h2 {
+  color: var(--VeryDarkBlue);
+}
+
+p {
+  color: var(--GrayishBlue);
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  margin-top: 95px;
+  background-color: var(--VeryLightGray);
+}
+
+.container {
+  padding: 10px;
+}
+
+.introducao {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+
+.introducao h1:first-child {
+  font-weight: 200;
+}
+
+.introducao p {
+  max-width: 55ch;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.content-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+  gap: 30px;
+  align-items: center;
+}
+
+.double {
+  display: grid;
+  gap: 30px;
+}
+
+.box {
+  display: grid;
+  height: 240px;
+  padding: 30px;
+  background-color: var(--White);
+  border-radius: 5px;
+  border-top: 5px solid transparent;
+  box-shadow: 0px 5px 50px -33px rgba(0, 0, 0, 0.55);
+}
+
+.box div h2 {
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-weight: 200;
+}
+
+.box img {
+  place-self: end;
+}
+
+.cyan-bt {
+  border-color: var(--Cyan);
+}
+
+.red-bt {
+  border-color: var(--Red);
+}
+
+.orange-bt {
+  border-color: var(--Orange);
+}
+
+.blue-bt {
+  border-color: var(--Blue);
+}
+
+@media (max-width: 760px) {
+  body{
+    margin: 90px 0;
+  }
+  .container {
+    align-items: center;
+  }
+  .introducao {
+    display: grid;
+    justify-items: center;
+  }
+  .introducao p {
+    max-width: 32ch;
+  }
+  .content-boxes {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .box {
+    max-width: 310px;
+  }
+}
